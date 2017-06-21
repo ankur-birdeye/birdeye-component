@@ -1,6 +1,6 @@
 {
   "name": "@birdeye/button",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -31,5 +31,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "styled-components": "^2.1.0"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
   }
 }
