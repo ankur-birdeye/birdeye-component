@@ -1,13 +1,14 @@
 {
   "name": "@birdeye/button",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "build": "babel lib -d build",
+    "build:watch": "babel lib -w -d build",
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**",
     "prepublish": "npm run build"
