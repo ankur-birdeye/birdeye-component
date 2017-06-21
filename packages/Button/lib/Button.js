@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import * as colors from "../styles/colors";
+
 const Button = styled.button`
-  background: #1FB6FF;
+  background: ${({ bgcolor }) => colors[bgcolor]};
   border: none;
   border-radius: 2px;
   color: #FFFFFF;
@@ -18,4 +20,9 @@ const Button = styled.button`
     background: #009EEB;
   }
 `;
+
+Button.defaultProps = {
+  bgcolor: "orange"
+};
+
 export default Button;
