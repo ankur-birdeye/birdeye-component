@@ -1,28 +1,34 @@
 import styled from "styled-components";
-import * as colors from "./colors";
+//import * as colors from "./colors";
+
+function setBackgroundColor({ type }) {
+  return type == "secondary" ? "white" : "#0b78e3";
+}
+
+function setWidth({ size }) {
+  return size == "full-width" ? "100%" : "auto";
+}
 
 const Button = styled.button`
-  background: ${({ bgcolor }) => colors[bgcolor]};
-  border: none;
-  border-radius: 2px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 40px;
-  font-weight: 200;
-  margin: 8px 0;
-  outline: none;
-  padding: 0 12px;
-  text-transform: uppercase;
-  transition: all 300ms ease;
-  &:hover {
-    background: #009EEB;
-  }
+    border-radius: 2px;
+    background-color: ${setBackgroundColor};
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.1),inset 0 1px 0 0 rgba(255,255,255,.13);
+    display: inline-block;
+    height: 36px;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    color: #fff;
+    line-height: 36px;
+    padding: 0 15px;
+    min-width: 160px;
+    border:none;
+    outline:none;
+    width:${setWidth};
 `;
 
 Button.defaultProps = {
   bgcolor: "orange"
 };
 
-export default Button;
+export { Button };

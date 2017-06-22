@@ -1,9 +1,19 @@
 import { configure, setAddon } from "@storybook/react";
-import infoAddon from "@storybook/addon-info";
 import { setOptions } from "@storybook/addon-options";
 
+import withPropsCombinations, {
+  setDefaults
+} from "react-storybook-addon-props-combinations";
+
+setAddon(withPropsCombinations);
+setDefaults(
+  {
+    // overwrite global defaults here
+  }
+);
+
 function loadStories() {
-  require("../packages/index.js");
+  require("./storybook.js");
 
   // You can require as many stories as you need.
 }
@@ -18,7 +28,5 @@ setOptions({
   downPanelInRight: true,
   sortStoriesByKind: true
 });
-
-setAddon(infoAddon);
 
 configure(loadStories, module);

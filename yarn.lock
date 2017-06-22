@@ -4160,6 +4160,10 @@ object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "http://localhost:4873/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
+object-hash@^1.1.5:
+  version "1.1.8"
+  resolved "http://localhost:4873/object-hash/-/object-hash-1.1.8.tgz#28a659cf987d96a4dabe7860289f3b5326c4a03c"
+
 object-keys@^1.0.8:
   version "1.0.11"
   resolved "http://localhost:4873/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
@@ -4705,6 +4709,12 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "http://localhost:4873/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
+pretty-format@^18.1.0:
+  version "18.1.0"
+  resolved "http://localhost:4873/pretty-format/-/pretty-format-18.1.0.tgz#fb65a86f7a7f9194963eee91865c1bcf1039e284"
+  dependencies:
+    ansi-styles "^2.2.1"
+
 pretty-format@^20.0.3:
   version "20.0.3"
   resolved "http://localhost:4873/pretty-format/-/pretty-format-20.0.3.tgz#020e350a560a1fe1a98dc3beb6ccffb386de8b14"
@@ -4933,6 +4943,13 @@ react-split-pane@^0.1.63:
     inline-style-prefixer "^3.0.2"
     prop-types "^15.5.8"
     react-style-proptype "^3.0.0"
+
+react-storybook-addon-props-combinations@^0.4.1:
+  version "0.4.1"
+  resolved "http://localhost:4873/react-storybook-addon-props-combinations/-/react-storybook-addon-props-combinations-0.4.1.tgz#c6e2fef16346891c94f5ccf7e971f50a74cba359"
+  dependencies:
+    object-hash "^1.1.5"
+    pretty-format "^18.1.0"
 
 react-stubber@^1.0.0:
   version "1.0.0"
