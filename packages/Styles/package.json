@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "babel lib -d build",
+    "build": "babel lib -d build && cp -r lib/fonts lib/style.css build",
     "build:watch": "babel lib -w -d build",
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**",
