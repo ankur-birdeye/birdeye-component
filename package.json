@@ -12,7 +12,7 @@
     "react-test-renderer": "^15.6.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook -s ./packages/Styles/lib/fonts",
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./packages/Styles/src/fonts",
     "test": "jest",
     "start": "npm run storybook",
     "postinstall": "node postinstall.js"

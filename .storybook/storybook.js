@@ -16,4 +16,7 @@ stories.addWithPropsCombinations("Default", Button, {
   children: ["Click"]
 });
 
-storiesOf("Header", module).addWithPropsCombinations("Default", Header, {});
+storiesOf("Header", module).addWithPropsCombinations("Default", Header, {
+  title: ["IKEA"],
+  children: [<h1>content</h1>]
+});
