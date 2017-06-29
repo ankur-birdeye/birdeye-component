@@ -2,6 +2,7 @@ import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Button } from "../packages/Button/src";
+import { Table } from "../packages/Styles/src/";
 import { Header } from "../packages/Header/src";
 import { Badge } from "../packages/Badge/src";
 import { Popover, Dropdown } from "../packages/Dropdown/src";
@@ -26,6 +27,7 @@ stories.addWithPropsCombinations("Header", Header, {
 stories.addWithPropsCombinations("Badge", Badge, {
   children: ["123"]
 });
+stories.add("Table", () => <Table />);
 
 storiesOf("Dropdown", module)
   .addWithPropsCombinations("Popover", Popover, {
