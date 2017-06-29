@@ -1,22 +1,36 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
+import { storiesOf, setAddon } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Button } from "../packages/Button/src";
 import { Header } from "../packages/Header/src";
+import { Badge } from "../packages/Badge/src";
+import Dropdown from "../packages/Dropdown/src";
 
 //import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 
-const stories = storiesOf("Button", module);
+const stories = storiesOf("FORM ELEMENTS", module);
 //stories.addDecorator(withKnobs);
 
-stories.addWithPropsCombinations("Default", Button, {
+stories.addWithPropsCombinations("Button", Button, {
   onClick: [action("clicked")],
   type: ["primary"],
   size: ["", "full-width"],
   children: ["Click"]
 });
 
-storiesOf("Header", module).addWithPropsCombinations("Default", Header, {
+stories.addWithPropsCombinations("Header", Header, {
   title: ["IKEA"],
   children: [<h1>content</h1>]
+});
+
+stories.addWithPropsCombinations("Badge", Badge, {
+  children: ["123"]
+});
+
+stories.addWithPropsCombinations("Dropdown", Dropdown, {
+  children: [
+    <ul>
+      <li><a href="">test</a></li>
+    </ul>
+  ]
 });
