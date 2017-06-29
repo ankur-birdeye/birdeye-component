@@ -1,3 +1,4 @@
+import Popover from "./Popover";
 import Dropdown from "./Dropdown";
 
-export default Dropdown;
+export { Popover, Dropdown };

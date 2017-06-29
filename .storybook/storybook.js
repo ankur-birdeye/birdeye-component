@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { Button } from "../packages/Button/src";
 import { Header } from "../packages/Header/src";
 import { Badge } from "../packages/Badge/src";
-import Dropdown from "../packages/Dropdown/src";
+import { Popover, Dropdown } from "../packages/Dropdown/src";
 
 //import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 
@@ -27,10 +27,18 @@ stories.addWithPropsCombinations("Badge", Badge, {
   children: ["123"]
 });
 
-stories.addWithPropsCombinations("Dropdown", Dropdown, {
-  children: [
-    <ul>
-      <li><a href="">test</a></li>
-    </ul>
-  ]
-});
+storiesOf("Dropdown", module)
+  .addWithPropsCombinations("Popover", Popover, {
+    children: [
+      <ul>
+        <li><a href="">test</a></li>
+      </ul>
+    ]
+  })
+  .addWithPropsCombinations("Dropdown", Dropdown, {
+    children: [
+      <ul>
+        <li><a href="">test</a></li>
+      </ul>
+    ]
+  });

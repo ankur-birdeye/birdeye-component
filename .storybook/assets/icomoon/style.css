@@ -1,0 +1,343 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?kiqqws');
+  src:  url('fonts/icomoon.eot?kiqqws#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kiqqws') format('truetype'),
+    url('fonts/icomoon.woff?kiqqws') format('woff'),
+    url('fonts/icomoon.svg?kiqqws#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ticket:before {
+  content: "\e900";
+}
+.icon-ticketed:before {
+  content: "\e901";
+}
+.icon-reply:before {
+  content: "\e902";
+}
+.icon-reply2:before {
+  content: "\e903";
+}
+.icon-post_reply:before {
+  content: "\e904";
+}
+.icon-park:before {
+  content: "\e905";
+}
+.icon-plus_close:before {
+  content: "\e906";
+}
+.icon-checkbox_unselected_16px:before {
+  content: "\e907";
+}
+.icon-plus:before {
+  content: "\e908";
+}
+.icon-checkbox-3:before {
+  content: "\e909";
+}
+.icon-publish:before {
+  content: "\e90c";
+}
+.icon-reset:before {
+  content: "\e90d";
+}
+.icon-filter_open:before {
+  content: "\e90e";
+}
+.icon-search:before {
+  content: "\e90f";
+}
+.icon-minimize_16px:before {
+  content: "\e910";
+}
+.icon-share:before {
+  content: "\e911";
+}
+.icon-cheveron_close:before {
+  content: "\e912";
+}
+.icon-cheveron_open:before {
+  content: "\e913";
+}
+.icon-download:before {
+  content: "\e914";
+}
+.icon-question:before {
+  content: "\e90a";
+}
+.icon-refresh:before {
+  content: "\e90b";
+  color: #666;
+}
+.icon-SurveyFlow_24px:before {
+  content: "\e915";
+  color: #666;
+}
+.icon-edit_24px:before {
+  content: "\e916";
+  color: #666;
+}
+.icon-edit_hover_24px:before {
+  content: "\e917";
+  color: #1976d2;
+}
+.icon-post_reply_hover_24px:before {
+  content: "\e918";
+  color: #1976d2;
+}
+.icon-post_reply_inactive_24px:before {
+  content: "\e919";
+  color: #ccc;
+}
+.icon-reset_hover_24px:before {
+  content: "\e91a";
+  color: #1976d2;
+}
+.icon-settings_24px:before {
+  content: "\e91b";
+  color: #666;
+}
+.icon-preview_24px-copy-2:before {
+  content: "\e91c";
+  color: #666;
+}
+.icon-duplicate_24px:before {
+  content: "\e91d";
+  color: #666;
+}
+.icon-featured_24px .path1:before {
+  content: "\e91e";
+  color: rgb(228, 228, 228);
+}
+.icon-featured_24px .path2:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-tag_24px:before {
+  content: "\e920";
+  color: #666;
+}
+.icon-move_24px:before {
+  content: "\e921";
+  color: #666;
+}
+.icon-delete:before {
+  content: "\e922";
+  color: #666;
+}
+.icon-sms-24-px:before {
+  content: "\e923";
+  color: #666;
+}
+.icon-email-24-px:before {
+  content: "\e925";
+  color: #666;
+}
+.icon-account_16px:before {
+  content: "\e942";
+  color: #666;
+}
+.icon-campaign_16px:before {
+  content: "\e944";
+  color: #666;
+}
+.icon-competitors_16px:before {
+  content: "\e945";
+  color: #666;
+}
+.icon-dashboard_16px:before {
+  content: "\e946";
+  color: #666;
+}
+.icon-info:before {
+  content: "\e948";
+  color: #666;
+}
+.icon-survey_16px:before {
+  content: "\e949";
+  color: #666;
+}
+.icon-email_24px:before {
+  content: "\e94a";
+  color: #666;
+}
+.icon-insights_16px:before {
+  content: "\e951";
+  color: #666;
+}
+.icon-reports_16px:before {
+  content: "\e95f";
+  color: #666;
+}
+.icon-review_16px:before {
+  content: "\e960";
+  color: #666;
+}
+.icon-service_16px:before {
+  content: "\e963";
+  color: #666;
+}
+.icon-setup_16px:before {
+  content: "\e965";
+  color: #666;
+}
+.icon-social_16px:before {
+  content: "\e967";
+  color: #666;
+}
+.icon-app_profile_24px:before {
+  content: "\e969";
+  color: #666;
+}
+.icon-write_review_24px:before {
+  content: "\e96c";
+  color: #666;
+}
+.icon-branding_16px:before {
+  content: "\e928";
+  color: #666;
+}
+.icon-more_24px:before {
+  content: "\e92a";
+  color: #666;
+}
+.icon-preview_24px:before {
+  content: "\e92b";
+  color: #666;
+}
+.icon-save_24px:before {
+  content: "\e92c";
+  color: #666;
+}
+.icon-search_24px:before {
+  content: "\e92d";
+  color: #666;
+}
+.icon-checkin_24px:before {
+  content: "\e92e";
+  color: #666;
+}
+.icon-qualify_sentiment_24px:before {
+  content: "\e930";
+  color: #666;
+}
+.icon-survey_skeleton_24px:before {
+  content: "\e931";
+  color: #666;
+}
+.icon-user:before {
+  content: "\e924";
+  color: #1976d2;
+}
+.icon-hamburger:before {
+  content: "\e926";
+  color: #fff;
+}
+.icon-app_menu:before {
+  content: "\e927";
+  color: #fff;
+}
+.icon-logout:before {
+  content: "\e929";
+  color: #666;
+}
+.icon-deeplink:before {
+  content: "\e92f";
+  color: #666;
+}
+.icon-checkmark-circled:before {
+  content: "\e932";
+}
+.icon-radio-on-button:before {
+  content: "\e933";
+}
+.icon-checked-data:before {
+  content: "\e934";
+}
+.icon-check-mark-in-a-circle:before {
+  content: "\e935";
+}
+.icon-move-up-16-px:before {
+  content: "\e936";
+  color: #666;
+}
+.icon-edit-24-px:before {
+  content: "\e937";
+  color: #666;
+}
+.icon-duplicate-24-px:before {
+  content: "\e938";
+  color: #666;
+}
+.icon-show-24-px:before {
+  content: "\e939";
+  color: #666;
+}
+.icon-hide-24-px:before {
+  content: "\e93a";
+  color: #666;
+}
+.icon-ic-keyboard-backspace-black-18-px:before {
+  content: "\e93b";
+  color: #fff;
+}
+.icon-skip-24-px-copy:before {
+  content: "\e93c";
+  color: #1976d2;
+}
+.icon-skip-24-px:before {
+  content: "\e93d";
+  color: #1976d2;
+}
+.icon-pickone_check:before {
+  content: "\e93e";
+  color: #fff;
+}
+.icon-pickone_cross:before {
+  content: "\e93f";
+  color: #fff;
+}
+.icon-arrow-pointing-left:before {
+  content: "\e940";
+}
+.icon-bulk-tag:before {
+  content: "\e941";
+  color: #666;
+}
+.icon-reassign-location:before {
+  content: "\e943";
+  color: #666;
+}
+.icon-featured-post .path1:before {
+  content: "\e947";
+  color: rgb(25, 118, 210);
+}
+.icon-featured-post .path2:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-helicopter:before {
+  content: "\e94c";
+  color: #fff;
+}

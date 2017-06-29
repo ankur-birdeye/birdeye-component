@@ -4,7 +4,7 @@ import "../../Styles/src/style.css";
 
 import React, { Component } from "react";
 
-class Dropdown extends Component {
+class Popover extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,11 +27,11 @@ class Dropdown extends Component {
   }
 }
 
-Dropdown.propTypes = {
+Popover.propTypes = {
   children: PropTypes.element
 };
 
-export default Dropdown;
+export default Popover;
 
 const Wrapper = styled.span`
   display:inline-block;
