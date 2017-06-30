@@ -6,7 +6,7 @@ export default styled.div`
   border: 0;
   border-radius: 0;
   position:relative;
- .target{
+ .target{ 
     z-index: 2;
     position:relative;
   }

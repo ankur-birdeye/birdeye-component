@@ -27,8 +27,4 @@ const Button = styled.button`
     width:${setWidth};
 `;
 
-Button.defaultProps = {
-  bgcolor: "orange"
-};
-
 export { Button };

@@ -13,7 +13,7 @@ class MultiSelect extends Component {
       options: props.options,
       placeholder: "Select",
       totalCount: props.options.length,
-      selectedCount: 0
+      selectedCount: props.options.filter((option) => option.checked).length
     };
   }
 
@@ -22,10 +22,13 @@ class MultiSelect extends Component {
       show: !this.state.show
     });
   };
-  hide = () => {
-    this.setState({ show: false });
+  closeDropdown = () => {
+    this.hide();
     var selectedOptions = this.state.options.filter((option) => option.checked);
     this.props.onBlur(selectedOptions);
+  };
+  hide = () => {
+    this.setState({ show: false });
   };
   filterOptions = (event) => {
     var value = event.target.value;
@@ -34,7 +37,6 @@ class MultiSelect extends Component {
     );
     this.setState({ search: event.target.value, options: filteredOptions });
   };
-
   onClickOptions = (e, i) => {
     this.setPlaceHolder(e.target.checked);
     var options = this.state.options.slice();
@@ -43,7 +45,6 @@ class MultiSelect extends Component {
       options
     });
   };
-
   setPlaceHolder(checked) {
     var placeholder;
     var selectedCount = this.state.selectedCount;
@@ -74,7 +75,7 @@ class MultiSelect extends Component {
       <DropdownWrapper width={this.props.width}>
         <MultiSelectWrapper>
           {this.state.show &&
-            <div className="click-overlay" onClick={this.hide} />}
+            <div className="click-overlay" onClick={this.closeDropdown} />}
           <div className="target">
             <button type="button" className="ms-choice" onClick={this.toggle}>
               <span className="">

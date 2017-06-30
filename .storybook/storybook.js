@@ -43,10 +43,10 @@ storiesOf("Dropdown", module)
   .addWithPropsCombinations("SingleSelect", SingleSelect, {
     width: [40],
     onClick: [action("clicked")],
-    options: [dropdownOptions.slice()]
+    options: [dropdownOptions]
   })
   .addWithPropsCombinations("MultiSelect", MultiSelect, {
     width: [30],
     onBlur: [action("clicked")],
-    options: [dropdownOptions.slice()]
+    options: [dropdownOptions]
   });
