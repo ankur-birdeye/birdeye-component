@@ -3,8 +3,9 @@ import styled from "styled-components";
 import "../../Styles/src/style.css";
 
 import React, { Component } from "react";
+import DropdownWrapper from "./DropdownWrapper";
 
-class Dropdown extends Component {
+class SingleSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,27 +30,33 @@ class Dropdown extends Component {
     );
     this.setState({ search: event.target.value, options: filteredOptions });
   };
-
-  onClickOption = (e) => {
-    console.log(e.target.value);
+  onClickOption = (option) => {
+    this.hide();
+    this.props.onClick({
+      selected: option
+    });
+    this.setState({
+      selected: option
+    });
   };
-
   render() {
     return (
-      <Wrapper width={this.props.width}>
-        <div className="click-overlay" onClick={this.hide} />
-        <div className="target">
-          <button type="button" className="ms-choice" onClick={this.toggle}>
-            <span className="">{this.state.selected.name || "Select"}</span>
-            <div
-              className={
-                "icon icon-cheveron_" + (this.state.show ? "open" : "close")
-              }
-            />
-          </button>
-
+      <DropdownWrapper width={this.props.width}>
+        <Wrapper>
           {this.state.show &&
-            <div className="ms-drop bottom">
+            <div className="click-overlay" onClick={this.hide} />}
+          <div className="target">
+            <button type="button" className="ms-choice" onClick={this.toggle}>
+              <span className="">{this.state.selected.name || "Select"}</span>
+              <div
+                className={
+                  "icon icon-cheveron_open " + (this.state.show ? "down" : "")
+                }
+              />
+            </button>
+            <div
+              className={"ms-drop bottom " + (!this.state.show ? "hide" : "")}
+            >
               <div className="ms-search">
                 <input
                   type="text"
@@ -68,12 +75,7 @@ class Dropdown extends Component {
                       <label className="">
                         <input
                           onChange={() => {
-                            this.props.onClick({
-                              selected: option
-                            });
-                            this.setState({
-                              selected: option
-                            });
+                            this.onClickOption(option);
                           }}
                           value={option.value}
                           type="radio"
@@ -91,121 +93,46 @@ class Dropdown extends Component {
                     No matches found
                   </li>}
               </ul>
-            </div>}
-        </div>
-      </Wrapper>
+            </div>
+          </div>
+        </Wrapper>
+      </DropdownWrapper>
     );
   }
 }
 
-Dropdown.propTypes = {
+SingleSelect.propTypes = {
   onClick: PropTypes.func,
   options: PropTypes.array,
   width: PropTypes.number
 };
 
-export default Dropdown;
+export default SingleSelect;
 
 const Wrapper = styled.div`
-  display:inline-block;
-  border: 0;
   background-color: #f4f4f4;
-  border-radius: 0;
-  position:relative;
-  
-  width:${({ width = 100 }) => width + "%"};
-  .target{
-    z-index: 2;
-    position:relative;
-  }
-  .click-overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-}
-  
   button{  
     padding: 11px 11px;
-    background: transparent;
-    outline:none;
-    border: none;
-    width: 100%;
-    text-align: left;
     span{
       color: #0d47a1;
-      padding-left: 0;
-      padding-right: 15px;
     }
   }
   .icon{
-    top: 3px;
-    margin-top: 10px;
-    bottom: 0;
+    top: 12px;
     right: 11px;
     position:absolute;
   }
-  .ms-search{
-    padding: 4px;
-    position:relative;
-    input{
-      background: 0 0;
-      border: 1px solid #B0B1B1;
-      color: #434343;
-      width: 100%;
-      transition: border-color .2s linear 0s;
-      padding: 0 20px 0 5px;
-      outline: none;
-      min-height: 24px;
-    }
-    .icon-search{
-      right: 9px;
-      top: 8px; 
-      position:absolute;
-    }
-  }
-  .ms-drop{
-    box-shadow: 0 4px 5px rgba(0,0,0,.15);
-    border-radius: 0;
-    border: 0 solid #ccc;
-    color: #434343;
-    margin-top: 1px;
-    max-height: 250px;
-    background-color:white;
-    width:100%;
-    position:absolute;
-  }
-  input{
-    width:100%;
-  }
+  
   li{
-    font-size: 12px;
-    border-bottom: 1px solid #f4f4f4;
-    :hover{
-      color:#1976d2;
-    }
-   
-    input{
-      display:none;
-    }
-    label,&.ms-no-results{
-      width: 100%;
-      padding: 6px 8px;
-      display: inline-block;
-      position:relative;
+    label{
       .icon-post_reply{
         font-weight: bold;
+        font-size: 15px;
         position: absolute;
         right: 7px;
-        top: 7px;
+        top: 5px;
         color:#1976d2;
-        font-weight:bold;
       }
-    }
-    span{
-      vertical-align: middle;
     }
   }
   

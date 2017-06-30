@@ -1,4 +1,4 @@
 import Popover from "./Popover";
-import Dropdown from "./Dropdown";
-
-export { Popover, Dropdown };
+import SingleSelect from "./SingleSelect";
+import MultiSelect from "./MultiSelect";
+export { Popover, SingleSelect, MultiSelect };

@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Button,Badge } from "../packages/Form/src";
+import { Button, Badge } from "../packages/Form/src";
 import { Table } from "../packages/Styles/demo/";
 import { Header } from "../packages/Header/src";
-import { Popover, Dropdown } from "../packages/Dropdown/src";
+import { Popover, SingleSelect, MultiSelect } from "../packages/Dropdown/src";
 
 //import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 
@@ -28,6 +28,10 @@ stories.addWithPropsCombinations("Badge", Badge, {
 });
 stories.add("Table", () => <Table />);
 
+var dropdownOptions = "123456789".split("").map(i => {
+  return { name: "name" + i, value: "value" + i };
+});
+
 storiesOf("Dropdown", module)
   .addWithPropsCombinations("Popover", Popover, {
     children: [
@@ -36,19 +40,13 @@ storiesOf("Dropdown", module)
       </ul>
     ]
   })
-  .addWithPropsCombinations("Dropdown", Dropdown, {
+  .addWithPropsCombinations("SingleSelect", SingleSelect, {
     width: [40],
     onClick: [action("clicked")],
-    options: [
-      [
-        {
-          name: "test",
-          value: "tset"
-        },
-        {
-          name: "abcd",
-          value: "abcd"
-        }
-      ]
-    ]
+    options: [dropdownOptions.slice()]
+  })
+  .addWithPropsCombinations("MultiSelect", MultiSelect, {
+    width: [30],
+    onBlur: [action("clicked")],
+    options: [dropdownOptions.slice()]
   });
