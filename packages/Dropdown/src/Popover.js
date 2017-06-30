@@ -49,7 +49,7 @@ const Wrapper = styled.span`
     position: absolute;
     z-index: 1;
     top: 28px;
-    font-size: 10px;
+    font-size: 12px;
     display: none;
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,.15);
   }

@@ -7,7 +7,7 @@
     "src": "src"
   },
   "scripts": {
-    "build": "babel src -d build && cp -r src/fonts src/style.css build",
+    "build": "babel src -d build && cp -r src/fonts src/*.css build",
     "build:watch": "babel src -w -d build",
     "lint": "eslint src/**; exit 0",
     "lint:watch": "esw -w src/**",

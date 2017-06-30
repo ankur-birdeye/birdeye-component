@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./table.css";
+import "../src/table.css";
 
 const Table = () => (
   <table className="container">

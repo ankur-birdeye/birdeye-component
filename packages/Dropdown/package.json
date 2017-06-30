@@ -27,10 +27,10 @@
     "eslint-plugin-react": "^7.1.0"
   },
   "dependencies": {
-    "@birdeye/styles": "^1.1.17",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "styled-components": "^2.1.0"
+    "styled-components": "^2.1.0",
+    "react-click-outside": "^2.3.1"
   }
 }

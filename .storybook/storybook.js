@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Button } from "../packages/Button/src";
-import { Table } from "../packages/Styles/src/";
+import { Table } from "../packages/Styles/demo/";
 import { Header } from "../packages/Header/src";
 import { Badge } from "../packages/Badge/src";
 import { Popover, Dropdown } from "../packages/Dropdown/src";
@@ -38,9 +38,18 @@ storiesOf("Dropdown", module)
     ]
   })
   .addWithPropsCombinations("Dropdown", Dropdown, {
-    children: [
-      <ul>
-        <li><a href="">test</a></li>
-      </ul>
+    width: [40],
+    onClick: [action("clicked")],
+    options: [
+      [
+        {
+          name: "test",
+          value: "tset"
+        },
+        {
+          name: "abcd",
+          value: "abcd"
+        }
+      ]
     ]
   });
