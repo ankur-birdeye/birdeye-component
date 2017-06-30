@@ -1,10 +1,9 @@
 import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Button } from "../packages/Button/src";
+import { Button,Badge } from "../packages/Form/src";
 import { Table } from "../packages/Styles/demo/";
 import { Header } from "../packages/Header/src";
-import { Badge } from "../packages/Badge/src";
 import { Popover, Dropdown } from "../packages/Dropdown/src";
 
 //import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
