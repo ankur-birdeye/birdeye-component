@@ -1,7 +1,7 @@
 {
   "name": "@birdeye/header",
   "version": "1.0.2",
-  "description": "",
+  "description": "Birdeye header module",
   "main": "build/index.js",
   "directories": {
     "src": "src"

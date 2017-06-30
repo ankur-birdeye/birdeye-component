@@ -1,7 +1,7 @@
 {
   "name": "@birdeye/form",
   "version": "1.1.21",
-  "description": "",
+  "description": "Module for base form elements",
   "main": "build/index.js",
   "directories": {
     "src": "src"
