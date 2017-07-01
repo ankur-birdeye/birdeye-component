@@ -170,7 +170,7 @@ class MultiSelect extends Component {
 
 MultiSelect.propTypes = {
   onBlur: PropTypes.func,
-  options: PropTypes.array,
+  options: PropTypes.array.isRequired,
   width: PropTypes.number
 };
 
