@@ -32,9 +32,10 @@ class MultiSelect extends Component {
   };
   filterOptions = (event) => {
     var value = event.target.value;
-    var filteredOptions = this.props.options.filter(
-      (option) => option.name.indexOf(value) != -1
-    );
+    var filteredOptions = this.props.options.map((option) => {
+      option.hide = option.name.indexOf(value) == -1;
+      return option;
+    });
     this.setState({ search: event.target.value, options: filteredOptions });
   };
   onClickOptions = (e, i) => {
@@ -61,13 +62,14 @@ class MultiSelect extends Component {
   }
 
   selectAll = (e) => {
-    var options = this.state.options.map((option) => {
+    var options = [...this.props.options].map((option) => {
       option.checked = e.target.checked;
+      option.hide = false;
       return option;
     });
     var selectedCount = e.target.checked ? this.state.totalCount : 0;
     var placeholder = e.target.checked ? "All Selected" : "Select";
-    this.setState({ options, selectedCount, placeholder });
+    this.setState({ options, selectedCount, placeholder, search: "" });
   };
 
   render() {
@@ -98,6 +100,7 @@ class MultiSelect extends Component {
                   autoCorrect="off"
                   spellCheck="false"
                   placeholder="Find"
+                  value={this.state.search}
                   onChange={this.filterOptions}
                 />
                 <span className="icon-search" />
@@ -128,28 +131,30 @@ class MultiSelect extends Component {
                   </label>
                 </li>
                 {this.state.options.length > 0 &&
-                  this.state.options.map((option, i) => (
-                    <li key={option.value} className="" title={option.name}>
-                      <label className="">
-                        <input
-                          onChange={(e) => {
-                            this.onClickOptions(e, i);
-                          }}
-                          value={option.value}
-                          type="checkbox"
-                          name={"selectItem" + i}
-                          checked={option.checked || false}
-                        />
-                        <span
-                          className={
-                            "icon-checkbox icon-checkbox" +
-                              (option.checked ? "-3" : "_unselected_16px")
-                          }
-                        />
-                        <span>{option.name}</span>
-                      </label>
-                    </li>
-                  ))}
+                  this.state.options
+                    .filter((option) => !option.hide)
+                    .map((option, i) => (
+                      <li key={option.value} className="" title={option.name}>
+                        <label className="">
+                          <input
+                            onChange={(e) => {
+                              this.onClickOptions(e, i);
+                            }}
+                            value={option.value}
+                            type="checkbox"
+                            name={"selectItem" + i}
+                            checked={option.checked || false}
+                          />
+                          <span
+                            className={
+                              "icon-checkbox icon-checkbox" +
+                                (option.checked ? "-3" : "_unselected_16px")
+                            }
+                          />
+                          <span>{option.name}</span>
+                        </label>
+                      </li>
+                    ))}
                 {this.state.options.length == 0 &&
                   <li className="ms-no-results">
                     No matches found

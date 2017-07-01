@@ -30,6 +30,7 @@
     "eslint-watch": "^3.1.2"
   },
   "dependencies": {
-    "copy-webpack-plugin": "^4.0.1"
+    "copy-webpack-plugin": "^4.0.1",
+    "styled-components": "^2.1.0"
   }
 }
