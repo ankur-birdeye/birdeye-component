@@ -9,7 +9,7 @@ function setWidth({ size }) {
   return size == "full-width" ? "100%" : "auto";
 }
 
-const Button = styled.button`
+const StyledButton = styled.button`
     border-radius: 2px;
     background-color: ${setBackgroundColor};
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.1),inset 0 1px 0 0 rgba(255,255,255,.13);
@@ -27,4 +27,8 @@ const Button = styled.button`
     width:${setWidth};
 `;
 
-export { Button };
+import React from "react";
+
+const Button = (props) => <StyledButton {...props} />;
+
+export default Button;

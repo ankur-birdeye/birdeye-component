@@ -662,12 +662,12 @@ exports[`Storyshots Form Button 1`] = `
       Click
     </button>
     <pre>
-      &lt;styled.button
+      &lt;Button
         onClick={[Function clicked]}
         size=""
         type="primary"&gt;
         Click
-      &lt;/styled.button&gt;
+      &lt;/Button&gt;
     </pre>
   </div>
   <div>
@@ -680,12 +680,12 @@ exports[`Storyshots Form Button 1`] = `
       Click
     </button>
     <pre>
-      &lt;styled.button
+      &lt;Button
         onClick={[Function clicked]}
         size="full-width"
         type="primary"&gt;
         Click
-      &lt;/styled.button&gt;
+      &lt;/Button&gt;
     </pre>
   </div>
 </div>
