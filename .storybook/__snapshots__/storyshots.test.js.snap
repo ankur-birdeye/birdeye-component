@@ -40,7 +40,7 @@ exports[`Storyshots Dropdown MultiSelect 1`] = `
                 placeholder="Find"
                 spellCheck="false"
                 type="text"
-                value={undefined}
+                value=""
               />
               <span
                 className="icon-search"

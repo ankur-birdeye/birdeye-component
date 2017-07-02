@@ -9,6 +9,7 @@ class MultiSelect extends Component {
     super(props);
     this.state = {
       show: false,
+      search: "",
       selected: [],
       options: props.options,
       placeholder: "Select",
@@ -24,7 +25,9 @@ class MultiSelect extends Component {
   };
   closeDropdown = () => {
     this.hide();
-    var selectedOptions = this.state.options.filter((option) => option.checked);
+    var selectedOptions = this.state.options
+      .filter((option) => option.checked)
+      .map((option) => ({ name: option.name, value: option.value }));
     this.props.onBlur(selectedOptions);
   };
   hide = () => {
@@ -38,10 +41,15 @@ class MultiSelect extends Component {
     });
     this.setState({ search: event.target.value, options: filteredOptions });
   };
-  onClickOptions = (e, i) => {
+  onClickOptions = (e, value) => {
     this.setPlaceHolder(e.target.checked);
-    var options = this.state.options.slice();
-    options[i].checked = e.target.checked;
+    var options = this.state.options.map((option) => {
+      if (option.value == value) {
+        option.checked = e.target.checked;
+      }
+      return option;
+    });
+
     this.setState({
       options
     });
@@ -50,26 +58,35 @@ class MultiSelect extends Component {
     var placeholder;
     var selectedCount = this.state.selectedCount;
     checked ? selectedCount++ : selectedCount--;
-    if (selectedCount == 0) {
-      placeholder = "Select";
-    } else if (selectedCount == this.state.totalCount) {
-      placeholder = "All Selected";
-    } else {
-      placeholder =
-        selectedCount + " of " + this.state.totalCount + " selected";
-    }
+    placeholder = this.getPlaceHolderText(selectedCount, this.state.totalCount);
     this.setState({ selectedCount, placeholder });
   }
-
+  getPlaceHolderText(selectedCount, totalCount) {
+    var placeholder;
+    if (selectedCount == 0) {
+      placeholder = "Select";
+    } else if (selectedCount == totalCount) {
+      placeholder = "All Selected";
+    } else {
+      placeholder = selectedCount + " of " + totalCount + " selected";
+    }
+    return placeholder;
+  }
   selectAll = (e) => {
-    var options = [...this.props.options].map((option) => {
-      option.checked = e.target.checked;
-      option.hide = false;
+    var options = this.state.options.map((option) => {
+      if (!option.hide) {
+        option.checked = e.target.checked;
+      }
       return option;
     });
-    var selectedCount = e.target.checked ? this.state.totalCount : 0;
-    var placeholder = e.target.checked ? "All Selected" : "Select";
-    this.setState({ options, selectedCount, placeholder, search: "" });
+    var selectedOptions = this.state.options.filter((option) => option.checked);
+
+    var selectedCount = e.target.checked ? selectedOptions.length : 0;
+    var placeholder = this.getPlaceHolderText(
+      selectedCount,
+      this.state.totalCount
+    );
+    this.setState({ options, selectedCount, placeholder });
   };
 
   render() {
@@ -138,7 +155,7 @@ class MultiSelect extends Component {
                         <label className="">
                           <input
                             onChange={(e) => {
-                              this.onClickOptions(e, i);
+                              this.onClickOptions(e, option.value);
                             }}
                             value={option.value}
                             type="checkbox"
