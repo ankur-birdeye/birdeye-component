@@ -7,6 +7,7 @@ import { Button, Badge } from "../packages/Form/src";
 import { Table } from "../packages/Styles/src/";
 import { Header } from "../packages/Header/src";
 import { Popover, SingleSelect, MultiSelect } from "../packages/Dropdown/src";
+import { Tab, Tabs, TabList, TabPanel } from "../packages/Styles/src/tabs";
 
 setAddon(infoAddon);
 setDefaults({
@@ -62,7 +63,8 @@ storiesOf("Dropdown", module)
       <ul>
         <li><a href="">test</a></li>
       </ul>
-    ]
+    ],
+    float: ["", "right"]
   })
   .addWithPropsCombinations("SingleSelect", SingleSelect, {
     width: [40],
@@ -74,3 +76,19 @@ storiesOf("Dropdown", module)
     onBlur: [action("clicked")],
     options: [dropdownOptions]
   });
+
+storiesOf("Tabs", module).addWithInfo("Default", "Default", () => (
+  <Tabs>
+    <TabList>
+      <Tab>Title 1</Tab>
+      <Tab>Title 2</Tab>
+    </TabList>
+
+    <TabPanel>
+      <h2>Any content 1</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Any content 2</h2>
+    </TabPanel>
+  </Tabs>
+));

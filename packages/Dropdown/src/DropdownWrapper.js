@@ -20,7 +20,7 @@ export default styled.div`
   }
    button{  
     cursor:pointer;     
-    background: transparent;
+    background: white;
     outline:none;
     border: none;
     width: 100%;

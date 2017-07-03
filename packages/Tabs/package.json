@@ -1,16 +1,15 @@
 {
-  "name": "@birdeye/styles",
-  "version": "1.1.20",
-  "description": "Module containing the styles",
+  "name": "@birdeye/tabs",
+  "version": "1.0.6",
+  "description": "Module for Multiselect and single select dropdowns",
   "main": "build/index.js",
   "directories": {
     "src": "src"
   },
   "scripts": {
-    "build": "rm -rf build && babel src -d build && cp -r src/assets src/*.css build",
-    "build:watch": "babel src -w -d build",
+    "build": "rm -rf build && babel src -d build --ignore spec.js,test.js",
+    "build:watch": "babel src -w -d build --ignore spec.js,test.js",
     "lint": "eslint src/**; exit 0",
-    "lint:watch": "esw -w src/**",
     "prepublish": "npm run build"
   },
   "keywords": [],
@@ -22,15 +21,16 @@
     "babel-eslint": "^7.2.3",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.16",
     "eslint": "^4.0.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.1.0",
-    "eslint-watch": "^3.1.2"
+    "eslint-plugin-react": "^7.1.0"
   },
   "dependencies": {
-    "copy-webpack-plugin": "^4.0.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-click-outside": "^2.3.1",
+    "react-dom": "^15.6.1",
     "react-tabs": "^1.1.0",
     "styled-components": "^2.1.0"
   }

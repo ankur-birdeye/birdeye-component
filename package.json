@@ -17,7 +17,7 @@
     "react-test-renderer": "^15.6.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook -s ./.storybook/assets/",
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./packages/Styles/src/assets/",
     "test": "jest",
     "start": "npm run storybook",
     "packageInstall": "node postinstall.js",

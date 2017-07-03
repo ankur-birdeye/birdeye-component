@@ -16,41 +16,44 @@ class Popover extends Component {
 
   render() {
     return (
-      <Wrapper style={{ cursor: "pointer" }}>
+      <Wrapper left={this.props.float == "right" ? "auto" : 0}>
         <span className="icon-download" />
-
         {this.props.children}
-
       </Wrapper>
     );
   }
 }
 
 Popover.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.element,
+  float: PropTypes.string
 };
 
 export default Popover;
 
 const Wrapper = styled.span`
   display:inline-block;
-  width:10px;
+  position:relative;
+  cursor:pointer;
   .icon-download{
     padding:10px;
     display:inline-block;
   }
-  &:hover{
-    ul{
-      display:inline-block;
-    } 
-  }
+  
   ul{
     position: absolute;
     z-index: 1;
     top: 28px;
+    left:${({ left }) => left};
+    right:${({ float }) => (float != "right" ? "auto" : 0)};
     font-size: 12px;
     display: none;
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,.15);
+  }
+  &:hover{
+    &>ul{ 
+      display:inline-block;
+    } 
   }
   li{
     background-color: #fff;
