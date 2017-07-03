@@ -16,7 +16,7 @@ class Popover extends Component {
 
   render() {
     return (
-      <Wrapper left={this.props.float == "right" ? "auto" : 0}>
+      <Wrapper float={this.props.float || "left"}>
         <span className="icon-download" />
         {this.props.children}
       </Wrapper>
@@ -29,7 +29,24 @@ Popover.propTypes = {
   float: PropTypes.string
 };
 
+PropTypes.defaultProps = {
+  float: "left"
+};
+
 export default Popover;
+
+const floatPosition = {
+  left: {
+    boxShadow: "2px 2px 2px 0 rgba(0,0,0,.15)",
+    left: 0,
+    right: "auto"
+  },
+  right: {
+    boxShadow: "-2px 2px 2px 0 rgba(0,0,0,.15)",
+    left: "auto",
+    right: 0
+  }
+};
 
 const Wrapper = styled.span`
   display:inline-block;
@@ -44,11 +61,11 @@ const Wrapper = styled.span`
     position: absolute;
     z-index: 1;
     top: 28px;
-    left:${({ left }) => left};
-    right:${({ float }) => (float != "right" ? "auto" : 0)};
+    left:${({ float }) => floatPosition[float].left};
+    right:${({ float }) => floatPosition[float].right};
     font-size: 12px;
     display: none;
-    box-shadow: 2px 2px 2px 0 rgba(0,0,0,.15);
+    box-shadow: ${({ float }) => floatPosition[float].boxShadow}
   }
   &:hover{
     &>ul{ 
