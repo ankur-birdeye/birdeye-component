@@ -4,11 +4,13 @@
 
 * Header
 * Styles
-* Button
+* Dropdown
 
 ## Setup
+* `npm install -g yarn`
 * `git clone <repo url>`
-* `npm install`
+* `yarn install`
+* `yarn packageInstall`
 
 ## Publish Changes
 * Run `lerna bootstrap`

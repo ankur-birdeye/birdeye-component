@@ -13,7 +13,7 @@ fs.readdirSync(lib).forEach(function(mod) {
 
   console.log("Runnig npm install on " + modPath);
   // install folder
-  cp.execSync("npm install", {
+  cp.execSync("yarn install", {
     cwd: modPath,
     env: process.env,
     stdio: "inherit"
