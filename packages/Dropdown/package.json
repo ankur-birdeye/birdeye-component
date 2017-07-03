@@ -1,6 +1,6 @@
 {
   "name": "@birdeye/dropdown",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Module for Multiselect and single select dropdowns",
   "main": "build/index.js",
   "directories": {
