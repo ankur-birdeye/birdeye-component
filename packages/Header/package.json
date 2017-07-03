@@ -7,7 +7,7 @@
     "src": "src"
   },
   "scripts": {
-    "build": "babel src -d build",
+    "build": "rm -rf build && babel src -d build",
     "build:watch": "babel src -w -d build",
     "lint": "eslint src/**; exit 0",
     "lint:watch": "esw -w src/**",
