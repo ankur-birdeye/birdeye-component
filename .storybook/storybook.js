@@ -25,11 +25,6 @@ stories.addWithPropsCombinations("Button", Button, {
   children: ["Click"]
 });
 
-stories.addWithPropsCombinations("Header", Header, {
-  title: ["IKEA"],
-  children: [<h1>content</h1>]
-});
-
 stories.addWithPropsCombinations("Badge", Badge, {
   children: ["123"]
 });
@@ -52,6 +47,11 @@ stories.addWithInfo("Table", "React Componont for Table", () => (
     </tbody>
   </Table>
 ));
+
+storiesOf("Header", module).addWithPropsCombinations("Header", Header, {
+  title: ["IKEA"],
+  children: [<h1>content</h1>]
+});
 
 var dropdownOptions = "123456789".split("").map(i => {
   return { name: "name" + i, value: "value" + i };
