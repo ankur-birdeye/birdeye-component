@@ -10,3 +10,8 @@ h3 {
   margin: 0;
   text-transform: none;
 }
+
+.row {
+  max-width: 1025px;
+  margin: 0 auto;
+}
