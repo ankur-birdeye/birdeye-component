@@ -1,6 +1,6 @@
 {
   "name": "@birdeye/styles",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Module containing the styles",
   "main": "build/index.js",
   "directories": {
