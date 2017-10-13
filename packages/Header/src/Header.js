@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 
-//header updated
+
 const H1 = styled.h1`
     background: #1976D2;
     padding: 0px 10px;
