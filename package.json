@@ -14,7 +14,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-storybook-addon-props-combinations": "^0.4.1",
-    "react-test-renderer": "^15.6.1"
+    "react-test-renderer": "^15.6.1",
+    "semantic-release": "^8.0.3"
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook -s ./packages/Styles/src/assets/",
@@ -22,7 +23,13 @@
     "test": "jest",
     "start": "npm run storybook",
     "packageInstall": "node postinstall.js",
-    "precommit": "npm run test"
+    "precommit": "npm run test",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankur-birdeye/birdeye-component.git"
+  }
 }
