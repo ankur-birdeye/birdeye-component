@@ -23,7 +23,6 @@
         "test": "jest",
         "start": "npm run storybook",
         "packageInstall": "node postinstall.js",
-        "precommit": "npm run test",
         "semantic-release": "semantic-release pre && npm publish && semantic-release post"
     },
     "dependencies": {},
