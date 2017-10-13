@@ -1,49 +1,49 @@
 {
-  "devDependencies": {
-    "@storybook/addon-info": "^3.1.6",
-    "@storybook/addon-options": "^3.1.2",
-    "@storybook/addon-storyshots": "^3.1.4",
-    "@storybook/react": "^3.1.3",
-    "babel-jest": "^20.0.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "condition-circle": "^1.5.0",
-    "cz-conventional-changelog": "^2.0.0",
-    "enzyme": "^2.9.1",
-    "husky": "^0.14.2",
-    "jest": "^20.0.4",
-    "lerna": "^2.0.0-rc.5",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-storybook-addon-props-combinations": "^0.4.1",
-    "react-test-renderer": "^15.6.1",
-    "semantic-release": "^8.0.3",
-    "standard-version": "^4.2.0"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook -s ./packages/Styles/src/assets/",
-    "build-storybook": "build-storybook -c .storybook -s ./packages/Styles/src/assets/ -o .out",
-    "test": "jest",
-    "start": "npm run storybook",
-    "packageInstall": "node postinstall.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "cm": "git-cz",
-    "pre": "semantic-release pre --debug=false",
-    "release": "standard-version"
-  },
-  "dependencies": {},
-  "version": "1.2.2",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ankur-birdeye/birdeye-component.git"
-  },
-  "name": "ankur-components",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "devDependencies": {
+        "@storybook/addon-info": "^3.1.6",
+        "@storybook/addon-options": "^3.1.2",
+        "@storybook/addon-storyshots": "^3.1.4",
+        "@storybook/react": "^3.1.3",
+        "babel-jest": "^20.0.3",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "condition-circle": "^1.5.0",
+        "cz-conventional-changelog": "^2.0.0",
+        "enzyme": "^2.9.1",
+        "husky": "^0.14.2",
+        "jest": "^20.0.4",
+        "lerna": "^2.0.0-rc.5",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-storybook-addon-props-combinations": "^0.4.1",
+        "react-test-renderer": "^15.6.1",
+        "semantic-release": "^8.0.3",
+        "standard-version": "^4.2.0"
+    },
+    "scripts": {
+        "storybook": "start-storybook -p 9001 -c .storybook -s ./packages/Styles/src/assets/",
+        "build-storybook": "build-storybook -c .storybook -s ./packages/Styles/src/assets/ -o .out",
+        "test": "jest",
+        "start": "npm run storybook",
+        "packageInstall": "node postinstall.js",
+        "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+        "pre": "semantic-release pre --debug=false",
+        "cm": "git-cz",
+        "release": "standard-version"
+    },
+    "dependencies": {},
+    "version": "1.2.2",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ankur-birdeye/birdeye-component.git"
+    },
+    "name": "ankur-components",
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "release": {
+        "debug": false
     }
-  },
-  "release": {
-    "debug": false
-  }
 }
