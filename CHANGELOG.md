@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/ankur-birdeye/birdeye-component/compare/v1.2.2...v1.3.0) (2017-10-13)
+
+
+### Features
+
+* **BIRDEYE-123:** test ([ed276cd](https://github.com/ankur-birdeye/birdeye-component/commit/ed276cd))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/ankur-birdeye/birdeye-component/compare/v1.2.1...v1.2.2) (2017-10-13)
 
